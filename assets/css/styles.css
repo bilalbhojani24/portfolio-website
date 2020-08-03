@@ -304,7 +304,7 @@ img{
   border-radius: .5rem;
 }
 
-/* ===== WORK =====*/
+/* ===== projects =====*/
 .work__container{
   row-gap: 2rem;
 }
@@ -353,9 +353,7 @@ img{
   font-size: 2rem;
   margin-bottom: var(--mb-4);
 }
-.footer__social{
-  margin-bottom: var(--mb-4);
-}
+
 .footer__icon{
   font-size: 1.5rem;
   color: #fff;
