@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
 :root{
-  --header-height: 3rem;
+  --header-height: 5rem;
   --font-semi: 600;
 }
 
@@ -161,13 +161,17 @@ img{
 }
 .nav__logo{
   color: var(--second-color);
+  text-transform: uppercase;
+  text-decoration: none !important;
 }
 .nav__toggle{
   color: var(--second-color);
   font-size: 1.5rem;
   cursor: pointer;
 }
-
+.nav__link{
+  text-decoration : none !important;
+}
 /*Active menu*/
 .active::after{
   position: absolute;
@@ -185,9 +189,9 @@ img{
 }
 
 /*===== HOME =====*/
-.home{
-  height: calc(100vh - 3rem);
-  row-gap: 1rem;
+
+.finalhome{
+  margin-top: 200px;
 }
 .home__data{
   align-self: center;
@@ -201,11 +205,11 @@ img{
 }
 .home__social{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .home__social-icon{
   width: max-content;
-  margin-bottom: var(--mb-2);
+  margin-right: var(--mb-2);
   font-size: 1.5rem;
   color: var(--second-color);
 }
@@ -217,6 +221,9 @@ img{
   right: 0;
   bottom: 0;
   width: 295px;
+}
+@media screen and (max-width: 768px){
+ 
 }
 
 /*BUTTONS*/
@@ -240,6 +247,9 @@ img{
 .about__subtitle{
   margin-bottom: var(--mb-2);
 }
+.about__text{
+  text-align: justify;
+}
 .about__img{
   justify-self: center;
 }
@@ -247,7 +257,11 @@ img{
   width: 200px;
   border-radius: .5rem;
 }
-
+.iconify{
+  color: #4070F4;
+  font-size: 18px;
+  margin-right:5px;
+}
 /* ===== SKILLS =====*/
 .skills__container{
   row-gap: 2rem;
@@ -255,6 +269,8 @@ img{
 }
 .skills__subtitle{
   margin-bottom: var(--mb-2);
+  text-align: center;
+  margin-bottom: var(--mb-4);
 }
 .skills__text{
   margin-bottom: var(--mb-4);
@@ -292,46 +308,72 @@ img{
   width: 95%;
 }
 .skills__css{
-  width: 85%;
+  width: 90%;
 }
 .skills__js{
-  width: 65%;
-}
-.skills__ux{
   width: 85%;
+}
+.skills__bootstrap{
+  width: 95%;
+}
+.skills__react{
+  width: 85%;
+}
+.skills__jquery{
+  width: 80%;
+}
+.skills__node{
+  width: 75%;
+}
+.skills__mongo{
+  width: 85%;
+}
+.skills__firebase{
+  width: 75%;
+}
+.skills__express{
+  width: 65%;
 }
 .skills__img{
   border-radius: .5rem;
 }
+/* ===== project =====*/
+.project .card-deck .card{
+  box-shadow: 5px 5px 18px rgba(0,0,0,.15);
+}
+.project .card-deck .card .card-header{
+  background-color : #4070F4;
+  color: white;
+}
+.project .card-deck .card h4{
+  color: #4070F4;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.project .card-deck .card .btn-block{
+  outline-color: #4070F4;
+}
 
-/* ===== WORK =====*/
-.work__container{
-  row-gap: 2rem;
+.project .card-deck .card .card-body .fa-html5{
+  color: #E35025;
 }
-.work__img{
-  box-shadow: 0 4px 25px rgba(14,36,49,.15);
-  border-radius: .5rem;
-  overflow: hidden;
+.project .card-deck .card .card-body .fa-css3-alt{
+  color: #0B72B7;
 }
-.work__img img{
-  transition: 1s;
-  cursor: pointer;
+.project .card-deck .card .card-body .fa-js-square{
+  color: #E3A127;
 }
-.work__img img:hover{
-  transform: scale(1.1);
+.project .card-deck .card .card-body .fa-bootstrap{
+  color: #1E0C3A;
 }
-
+.project .card-deck .card .card-body .fa-react{
+  color: #09CBEC;
+}
+.project .card-deck .card .card-body .fa-node{
+  color: #9BBD4F;
+}
 /* ===== CONTACT =====*/
-.contact__input{
-  width: 100%;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi);
-  padding: 1rem;
-  border-radius: .5rem;
-  border: 1.5px solid var(--second-color);
-  outline: none;
-  margin-bottom: var(--mb-4);
-}
+
 .contact__button{
   display: block;
   border: none;
@@ -339,6 +381,7 @@ img{
   font-size: var(--normal-font-size);
   cursor: pointer;
   margin-left: auto;
+  margin-bottom: 1rem;
 }
 
 /* ===== FOOTER =====*/
@@ -438,6 +481,49 @@ img{
     justify-items: center;
   }
 }
+/*form */
+
+
+html
+{
+  height:100%;
+  width:100%;
+}
+body{    
+  background:url('images/jurassic-coast-1089035_1920.jpg') no-repeat;
+  background-size: cover;
+  height:100%;
+
+}
+
+.form-top{
+  margin-top: 30px;
+}
+.panel{
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,.12), 0 1px 6px 0 rgba(0,0,0,.12);
+  border-radius: 6px;
+    border: 0;
+}
+@-moz-document url-prefix() {
+    .form-control{
+      height: auto;
+    }
+}
+.panel-primary{
+  background-color: #2c3e50;
+  color: #fff;
+}
+.panel-primary>.panel-heading {
+    color: #fff;
+    font-size: 20px;
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+}
+.btn-warning{
+  background-color: transparent;
+  border-color: #bdc3c7;
+}
+
 
 @media screen and (min-width: 1024px){
   .bd-grid{
